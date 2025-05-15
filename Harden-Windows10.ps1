@@ -77,7 +77,7 @@ If (((Get-ItemProperty "HKLM:\Software\Policies\Microsoft\Windows\Installer").Al
 {
 
     Write-Output "[*] Device is vulnerable to AlwaysInstallElevated priviliege escalation. Mitigating threat. Read more here if desired: https://docs.microsoft.com/en-us/windows/win32/msi/alwaysinstallelevated"
-    Set-ItemProperty -Path "HKCU:\Software\Policies\Microsoft\Windows\Insatller" -Name "AlwaysInstallElevated" -Value 0 -ErrorAction SilentlyContinue
+    Set-ItemProperty -Path "HKCU:\Software\Policies\Microsoft\Windows\Installer" -Name "AlwaysInstallElevated" -Value 0 -ErrorAction SilentlyContinue
     Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\Installer" -Name "AlwaysInstallElevated" -Value 0
 
 }  # End If
